@@ -7,6 +7,9 @@ import userRoutes from "./routes/userRoutes.js";
 
 import appVersionRoutes
 from "./routes/appVersionRoutes.js";
+import jobApplicationRoutes
+from "./routes/jobApplicationRoutes.js";
+
 
 
 dotenv.config();
@@ -23,6 +26,11 @@ app.use("/api/users", userRoutes);
 
 app.use("/api/app",appVersionRoutes);
 
+
+app.use(
+    "/api/job-applications",
+    jobApplicationRoutes
+);
 
 
 
